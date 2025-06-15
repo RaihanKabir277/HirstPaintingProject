@@ -37,16 +37,28 @@ timmy.setheading(220)
 timmy.forward(300)
 timmy.setheading(0)
 
-for dot_counts in range(1, 100 + 1):
-    timmy.dot(20, random.choice(color_list))
-    timmy.forward(50)
-    if dot_counts % 10 == 0:
-        timmy.setheading(90)
-        timmy.forward(50)
-        timmy.setheading(180)
-        timmy.forward(500)
-        timmy.setheading(0)
+# for dot_counts in range(1, 100 + 1):
+#     timmy.dot(20, random.choice(color_list))
+#     timmy.forward(50)
+#     if dot_counts % 10 == 0:
+#         timmy.setheading(90)
+#         timmy.forward(50)
+#         timmy.setheading(180)
+#         timmy.forward(500)
+#         timmy.setheading(0)
 
+# -------Alternatives version --------
+
+for _ in range(10):
+    for _ in range(10):
+        timmy.dot(20, random.choice(color_list))
+        timmy.forward(50)
+    
+    timmy.setheading(90)
+    timmy.forward(50)
+    timmy.setheading(180)
+    timmy.forward(500)
+    timmy.setheading(0)
 
     
 
